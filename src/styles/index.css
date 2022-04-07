@@ -1,0 +1,170 @@
+@import './transition.css';
+@import './animation.css';
+@import './n_animation.css';
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+/*  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, SimSun, sans-serif;*/
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  background-color: rgb(var(--bg));
+  color: rgb(var(--text-color));
+  user-select: none;
+  overflow: hidden;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), -2px 2px 4px rgba(0, 0, 0, 0.6);
+
+  /* 滚动条颜色 */
+  scrollbar-shadow-color: rgba(7, 67, 116, 0.2);
+
+  /* 滚动条的边框 */
+  scrollbar-track-color: rgba(3, 50, 88, 0.7);
+
+  /* 浏览器滚动条背景色 */
+  scrollbar-arrow-color: rgba(7, 67, 116, 0.7);
+}
+div{
+  font-family: 'SourceHanSansCN' !important;
+}
+::-webkit-scrollbar {
+  width: 4px;
+  height: 6px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: none;
+}
+
+:root {
+  --bg: 0, 0, 0;
+  --text-color: 255, 255, 255;
+  --primary: 0, 46, 83;
+  --active: 0, 155, 255;
+}
+
+:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 183, 255, 0.5);
+}
+
+:hover::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.el-popper {
+  /* text-shadow: none;
+  border-radius: 2px !important;
+  background: rgba(0, 98, 163, 0.8);
+  background: linear-gradient(
+    to left top,
+    rgba(0, 98, 163, 0.8),
+    #0062a3
+  ) !important;
+  border-color: rgb(2, 131, 218) !important;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8) !important; */
+}
+
+.el-picker-panel {
+  text-shadow: none;
+  border-radius: 2px !important;
+  background: transparent !important;
+}
+.el-message {
+  text-shadow: none;
+}
+
+.el-date-picker__header-label {
+  color: #fff !important;
+}
+
+.el-date-picker__header {
+  margin: 6px 0 !important;
+  padding: 0 20px;
+  padding-bottom: 6px !important;
+}
+
+.el-date-picker__header--bordered {
+  border-bottom: solid 1px rgb(2, 131, 218) !important;
+}
+
+.el-month-table td {
+  padding: 6px 0 !important;
+}
+
+.el-year-table td {
+  padding: 6px 0 !important;
+}
+
+.el-picker-panel__icon-btn {
+  color: #fff !important;
+  font-size: 16px !important;
+  outline: none !important;
+}
+
+.el-year-table td .cell {
+  font-size: 14px !important;
+  color: #fff !important;
+}
+
+.el-month-table td .cell {
+  font-size: 14px !important;
+  color: #fff !important;
+}
+
+.el-month-table .current .cell {
+  color: #daf103 !important;
+}
+
+.el-year-table .current .cell {
+  color: #daf103 !important;
+}
+
+.el-popper.is-light .el-popper__arrow::before {
+  border: 1px solid rgb(2, 131, 218) !important;
+  background: rgba(0, 98, 163, 1) !important;
+}
+
+.gantryPop {
+  border:1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px 16px;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  box-shadow: 0 0 6px #000;
+  background: linear-gradient(to right, rgb(0, 183, 255), rgb(0, 59, 88));
+  
+}
+
+.gantryPop.stat {
+  background: linear-gradient(to right, rgb(1, 156, 123),rgb(1, 87, 65));
+}
+.gantryPop.gantry {
+  background: linear-gradient(to right, rgb(0, 183, 255), rgb(0, 59, 88));
+}
+
+.comDefault {
+  position: relative;
+  width: 0;
+  height: 0;
+  display: flex !important;
+  align-items: center;
+  justify-content:center;
+  right: -30px;
+}

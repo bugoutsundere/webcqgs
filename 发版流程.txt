@@ -1,0 +1,35 @@
+1.  git 提交代码
+git add .
+git commit -m"xx"
+git pull origin master
+git push origin master
+
+2. git检查
+http://36.110.103.178:61449/ROUTE_STRUCT/manager-web-crcc.git
+账号：648743050@qq.com
+密码：123456789
+
+3. jinkens 部署
+http://36.110.103.178:10980/
+账号： ztj001
+密码：)@0NJk?Z
+
+4.正式网站核对
+http://183.64.175.153:28880/ 
+账号：admin
+密码：Bb1234567890.,
+
+git 账号
+http://192.168.10.240/
+用户名: wangjuncheng@ctf-tech.com
+密码: 2906290640@
+
+svn 地址
+https://36.110.103.178:5443
+用户名：王俊程
+密码：Wjc@Cmnit#1617
+
+数据接口信息可以在以下链接查看及测试
+http://183.64.175.153:32345/dpt
+用户名密码：cockpit/123456
+指标结果->收费，已有部分接口

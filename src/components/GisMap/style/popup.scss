@@ -1,0 +1,186 @@
+@import "./variables.scss";
+
+.minemap-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-flex;
+  display: flex;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.minemap-popup-anchor-top,
+.minemap-popup-anchor-top-left,
+.minemap-popup-anchor-top-right {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.minemap-popup-anchor-bottom,
+.minemap-popup-anchor-bottom-left,
+.minemap-popup-anchor-bottom-right {
+  -webkit-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+.minemap-popup-anchor-left {
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+.minemap-popup-anchor-right {
+  -webkit-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.minemap-popup-tip {
+  position: relative;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  // border: 8px solid transparent;
+  background: transparent center no-repeat url("~/assets/images/pop-tip.png");
+}
+
+.minemap-popup-anchor-top .minemap-popup-tip {
+  align-self: center;
+  // border-top: none;
+  // border-bottom-color: $--popup-border-color;
+  transform: rotate(180deg);
+}
+
+.minemap-popup-anchor-top-left .minemap-popup-tip {
+  align-self: flex-start;
+  // border-top: none;
+  // border-left: none;
+  // border-bottom-color: $--popup-border-color;
+  transform: rotate(180deg);
+}
+
+.minemap-popup-anchor-top-right .minemap-popup-tip {
+  align-self: flex-end;
+  // border-top: none;
+  // border-right: none;
+  // border-bottom-color: $--popup-border-color;
+  transform: rotate(180deg);
+}
+
+.minemap-popup-anchor-bottom .minemap-popup-tip {
+  align-self: center;
+  // border-bottom: none;
+  // border-top-color: $--popup-border-color;
+}
+
+.minemap-popup-anchor-bottom-left .minemap-popup-tip {
+  align-self: flex-start;
+  // border-bottom: none;
+  // border-left: none;
+  // border-top-color: $--popup-border-color;
+}
+
+.minemap-popup-anchor-bottom-right .minemap-popup-tip {
+  align-self: flex-end;
+  // border-bottom: none;
+  // border-right: none;
+  // border-top-color: $--popup-border-color;
+}
+
+.minemap-popup-anchor-left .minemap-popup-tip {
+  align-self: center;
+  // border-left: none;
+  // border-right-color: $--popup-border-color;
+  transform: rotate(90deg);
+}
+
+.minemap-popup-anchor-right .minemap-popup-tip {
+  // -webkit-align-self: center;
+  align-self: center;
+  // border-left: none;
+  // border-left-color: $--popup-border-color;
+  transform: rotate(-90deg);
+}
+
+.minemap-popup-close-button {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 10;
+  font-size: 24px;
+  color: #c0c4cc;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+}
+
+.minemap-popup-close-button:hover {
+  // background-color: rgba(0, 0, 0, 0.05);
+  color: #fff;
+}
+
+.minemap-popup-content {
+  position: relative;
+  max-width: none;
+  max-height: none;
+  min-width: 60px;
+  min-height: 40px;
+  padding: 10px;
+  // background: #fff;
+  // border-radius: 3px;
+  // box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  // padding: 10px 10px 15px;
+  pointer-events: auto;
+  // background-color: $--popup-bg-color;
+  // border: solid 1px $--popup-border-color;
+  // border-radius: 4px;
+  // box-shadow: 0 4px 9px 0 rgba(10, 36, 51, 0.35),
+  //   inset 0 0 12px 6px rgba(44, 198, 255, 0.16);
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: solid transparent;
+    border-image: url("~/assets/images/pop-border.png") 18 28 fill round;
+    border-width: 18px 28px;
+    content: "";
+  }
+}
+
+.minemap-popup-anchor-top-left .minemap-popup-content {
+  border-top-left-radius: 0;
+}
+
+.minemap-popup-anchor-top-right .minemap-popup-content {
+  border-top-right-radius: 0;
+}
+
+.minemap-popup-anchor-bottom-left .minemap-popup-content {
+  border-bottom-left-radius: 0;
+}
+
+.minemap-popup-anchor-bottom-right .minemap-popup-content {
+  border-bottom-right-radius: 0;
+}
+
+.minemap-popup-track-pointer {
+  display: none;
+}
+
+.minemap-popup-track-pointer * {
+  pointer-events: none;
+  user-select: none;
+}
+
+.minemap-map:hover .minemap-popup-track-pointer {
+  display: flex;
+}
+
+.minemap-map:active .minemap-popup-track-pointer {
+  display: none;
+}
+
+.minimap-popup-content-box {
+  position: relative;
+}

@@ -1,0 +1,11 @@
+@use "sass:math";
+// 设计图宽度
+$designWidth: 1920;
+// 设计图高度
+$designHeight: 1080;
+@function vw($px) {
+  @return math.div($px, $designWidth) * 100vw;
+}
+@function vh($px) {
+  @return math.div($px, $designHeight) * 100vh;
+}

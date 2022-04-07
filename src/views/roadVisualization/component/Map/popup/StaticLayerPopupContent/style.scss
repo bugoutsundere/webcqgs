@@ -1,0 +1,33 @@
+.slpc {
+  position: relative;
+  display: flex;
+  .header {
+    width: 44px;
+    color: #90b1cd;
+    text-align: center;
+    border-right: 2px dashed #1a4a72;
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  .body {
+    padding-left: 4px;
+    flex: 1;
+    align-self: center;
+  }
+  .title {
+    margin-bottom: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #eee;
+    &:before {
+      margin-right: 4px;
+      border-left: 2px solid #21aeff;
+      content: ' ';
+    }
+  }
+  .content {
+    color: #ddd;
+  }
+}
